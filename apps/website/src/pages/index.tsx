@@ -5,6 +5,7 @@ import Link from 'next/link'
 import KcHeader from '../components/headers/KcHeader'
 import KcLayout from '../layouts/KcLayout'
 import clsx from 'clsx'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,6 +14,9 @@ const BgOverlay = (
 )
 
 export default function Home() {
+
+  const [animationParent] = useAutoAnimate<HTMLDivElement>()
+
   return (
     <>
       <Head>
@@ -22,7 +26,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <KcLayout overlay={BgOverlay}>
-        <div className="vh-80 flex items-center tails-selected-element">
+        <div ref={animationParent} className="vh-80 flex items-center tails-selected-element">
           <div className="w-full mx-auto text-center md:text-center">
             <h3 className="px-0 mb-6 text-lg text-slate-600 md:text-xl">Öğrenirken eğlenmeye hazır mısın? 🎉</h3>
             <h1 className="mb-6 text-5xl font-extrabold leading-none max-w-5xl mx-auto tracking-normal text-slate-300 sm:text-6xl md:text-6xl lg:text-7xl md:tracking-tight">
@@ -54,7 +58,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-1/2 md:px-3">
+              <div className="w-full md:w-1/2 md:px-3 ">
                 <div className="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl" data-rounded="rounded-xl" data-rounded-max="rounded-full">
                   <img src="https://cdn.devdojo.com/images/november2020/hero-image.jpeg" className="" />
                 </div>

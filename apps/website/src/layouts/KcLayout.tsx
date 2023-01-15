@@ -5,6 +5,8 @@ import { KcHeader } from '../components/headers';
 export type KcLayoutProps = {
   children: React.ReactNode;
   overlay?: React.ReactNode;
+  hideHeader?: boolean;
+  hideFooter?: boolean;
 }
 
 const KcLayout = (props: KcLayoutProps): JSX.Element => {
@@ -12,11 +14,11 @@ const KcLayout = (props: KcLayoutProps): JSX.Element => {
     <>
       {props.overlay}
       <div className='lg:w-4/5 md:w-11/12 px-5 m-auto relative z-10'>
-        <KcHeader />
+        {!props.hideHeader && <KcHeader />}
         <main>
           {props.children}
         </main>
-        <KcFooter />
+        {!props.hideFooter && <KcFooter />}
       </div>
     </>
   )
