@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react'
+import { KodChallengeBrand } from '../brands';
 
 export type KcHeaderProps = {
     disableDrawer?: boolean;
@@ -23,7 +24,7 @@ const KcHeader = (props: KcHeaderProps) => {
                                 <li><Link href={"/projects"}>Projeler</Link></li>
                             </ul>
                         </div>
-                        <a className="btn btn-ghost normal-case text-xl"><span className='text-[color:var(--brand-color)]'>Kod</span>Challenge</a>
+                        <KodChallengeBrand />
                     </div>
                     <div className="navbar-center hidden md:flex">
                         <ul className="menu menu-horizontal px-1 text-slate-400">
