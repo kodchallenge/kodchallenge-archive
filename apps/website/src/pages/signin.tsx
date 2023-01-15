@@ -2,15 +2,15 @@ import React from 'react'
 import KcLayout from '../layouts/KcLayout'
 import clsx from 'clsx'
 import s from '@/styles/main.module.css'
-import { KodChallengeBrand } from '../components/brands'
 import Link from 'next/link'
 import Head from 'next/head'
+import { KodChallengeBrand } from '../components/brands'
 
 const BgOverlay = (
     <div className={clsx(s.dotPointBg, "full-screen")}></div>
 )
 
-const Signup = () => {
+const Signin = () => {
     return (
         <KcLayout overlay={BgOverlay} hideHeader hideFooter>
             <Head>
@@ -25,13 +25,7 @@ const Signup = () => {
                     <div className="p-0 sm:p-8 card-body">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Kullanıcı Adı</span>
-                            </label>
-                            <input type="text" className="input input-bordered" />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Eposta Adresi</span>
+                                <span className="label-text">Kullanıcı Adı veya E-posta</span>
                             </label>
                             <input type="text" className="input input-bordered" />
                         </div>
@@ -41,26 +35,14 @@ const Signup = () => {
                             </label>
                             <input type="text" className="input input-bordered" />
                         </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Parola Tekrar</span>
-                            </label>
-                            <input type="text" className="input input-bordered" />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Ad - Soyad (Opsiyonel)</span>
-                            </label>
-                            <input type="text" className="input input-bordered" />
-                        </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Kayıt Ol</button>
+                            <button className="btn btn-primary">Giriş Yap</button>
                         </div>
                     </div>
                     <div className='text-center'>
                         <p className='m-0'>
-                            Hesabın var mı ?
-                            <Link href={"/signin"} className="btn btn-link">GİRİŞ YAP</Link>
+                            KodChallenge'da yeni misin?
+                            <Link href={"/signup"} className="btn btn-link">HESAP OLUŞTUR</Link>
                         </p>
                     </div>
                 </div>
@@ -69,4 +51,4 @@ const Signup = () => {
     )
 }
 
-export default Signup
+export default Signin

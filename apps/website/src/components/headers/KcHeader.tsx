@@ -1,19 +1,11 @@
 import Link from 'next/link';
-import React, { useEffect } from 'react'
+import React from 'react'
+
 export type KcHeaderProps = {
     disableDrawer?: boolean;
 }
 
 const KcHeader = (props: KcHeaderProps) => {
-
-    const LinkItem = () => (
-        <li>
-            <a>
-        
-            </a>
-        </li>
-    )
-
 
     return (
         <header>
@@ -42,7 +34,7 @@ const KcHeader = (props: KcHeaderProps) => {
                         </ul>
                     </div>
                     <div className="navbar-end">
-                        <a className="btn btn-primary">Giriş Yap</a>
+                        <Link href={"/signin"} className="btn btn-primary">Giriş Yap</Link>
                     </div>
                 </nav>
             </div>
