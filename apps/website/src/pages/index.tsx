@@ -2,10 +2,8 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import s from '@/styles/main.module.css'
 import Link from 'next/link'
-import KcHeader from '../components/headers/KcHeader'
 import KcLayout from '../layouts/KcLayout'
 import clsx from 'clsx'
-import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,8 +12,6 @@ const BgOverlay = (
 )
 
 export default function Home() {
-
-  const [animationParent] = useAutoAnimate<HTMLDivElement>()
 
   return (
     <>
@@ -26,7 +22,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <KcLayout overlay={BgOverlay}>
-        <div ref={animationParent} className="vh-80 flex items-center tails-selected-element">
+        <div className="vh-80 flex items-center tails-selected-element">
           <div className="w-full mx-auto text-center md:text-center">
             <h3 className="px-0 mb-6 text-lg text-slate-600 md:text-xl">Öğrenirken eğlenmeye hazır mısın? 🎉</h3>
             <h1 className="mb-6 text-5xl font-extrabold leading-none max-w-5xl mx-auto tracking-normal text-slate-300 sm:text-6xl md:text-6xl lg:text-7xl md:tracking-tight">
