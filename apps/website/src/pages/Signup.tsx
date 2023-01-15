@@ -60,7 +60,7 @@ const Signup = () => {
                     <div className='text-center'>
                         <p className='m-0'>
                             Hesabın var mı ?
-                            <Link href={"#"} className="btn btn-link">GİRİŞ YAP</Link>
+                            <Link href={"/signin"} className="btn btn-link">GİRİŞ YAP</Link>
                         </p>
                     </div>
                 </div>
