@@ -1,0 +1,10 @@
+{
+  "name": "@kodchallenge/problems",
+  "version": "0.0.1-beta",
+  "description": "Project where the problems in KodChallenge are stored",
+  "main": "index.js",
+  "repository": "https://github.com/kodchallenge/kodchallenge",
+  "author": "Yasin Torun",
+  "license": "MIT",
+  "private": true
+}
