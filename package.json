@@ -1,0 +1,10 @@
+{
+  "name": "kodchallenge",
+  "version": "1.0.0",
+  "repository": "https://github.com/kodchallenge/kodchallenge.git",
+  "author": "Yasin Torun <yasintorun4680@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "website:dev": "yarn --cwd apps/website dev"
+  }
+}
