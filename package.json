@@ -5,6 +5,8 @@
   "author": "Yasin Torun <yasintorun4680@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "website:dev": "yarn --cwd apps/website dev"
-  }
+    "website": "yarn --cwd apps/website",
+    "editor": "yarn --cwd packages/kod-editor"
+  },
+  "dependencies": {}
 }
