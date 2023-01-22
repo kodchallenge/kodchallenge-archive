@@ -1,37 +1,15 @@
-const t = [
-    {
-        name: "c",
-        keys: {
-            "int": {
-                convert: "parseInt(args[{index}])",
-                equals: "int"
-            },
-            "string": {
-                convert: "args[{index}]",
-                equals: "char*"
-            }
-        }
-    },
-    {
-        name: "javascript",
-        keys: {
-            "int": {
-                convert: " process.argv[{index} + 2]",
-                equals: "const"
-            },
-        }
-    },
-    {
-        name: "java",
-        keys: {
-            "string": {
-                convert: "args[{index}]",
-                equals: "String"
-            },
-        }
-    }
-]
+const express = require("express")
+require("dotenv").config();
+const PORT = process.env.PORT || 5001
 
-`${tracks.equals} ${veriableName} = ${tracks.convert.replace("{index}", index)}`
+const app = express()
 
-"const a = 1"
+app.use(express.static('public'))
+
+app.get("/", (req, res) => {
+    res.send("@KodChallenge/Problems server is running")
+})
+
+app.listen(PORT, () => {
+  console.log(`@KodChallenge/Problems server listening on port ${PORT}`)
+})
