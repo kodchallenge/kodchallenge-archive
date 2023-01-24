@@ -81,6 +81,26 @@ export const KodEditor = () => {
                     width: 100vw;
                     overflow: hidden;
                 }
+                /* width */
+                ::-webkit-scrollbar {
+                width: 4px;
+                }
+
+                /* Track */
+                ::-webkit-scrollbar-track {
+                background: #ffffff50;
+                }
+
+                /* Handle */
+                ::-webkit-scrollbar-thumb {
+                    background: #ffffffaa;
+                    border-radius: 10px;
+                }
+
+                /* Handle on hover */
+                ::-webkit-scrollbar-thumb:hover {
+                background: #fff;
+                }
                 `}</style>
             </Head>
             <div className="kc-editor">
