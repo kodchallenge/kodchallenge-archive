@@ -3,11 +3,9 @@
 import Editor from "./editor"
 import Header from "./Header"
 import KodLayout from 'kod-layout'
-// import Split from 'react-split'
 import ProblemDescription from "./ProblemDescription"
 import Terminal from "./Terminal"
 import Head from "next/head"
-// import "./kod-editor.css"
 
 export const KodEditor = () => {
     return (
@@ -100,6 +98,10 @@ export const KodEditor = () => {
                 /* Handle on hover */
                 ::-webkit-scrollbar-thumb:hover {
                 background: #fff;
+                }
+
+                .kl-base {
+                    background-color: #282c34;
                 }
                 `}</style>
             </Head>
