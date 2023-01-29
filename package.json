@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "website": "yarn --cwd apps/website",
-    "editor": "yarn --cwd packages/kod-editor"
+    "problems": "yarn --cwd apps/problems"
   },
   "dependencies": {}
 }

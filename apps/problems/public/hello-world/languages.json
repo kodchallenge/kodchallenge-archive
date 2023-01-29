@@ -1,0 +1,14 @@
+[
+    {
+        "name": "C++",
+        "slug": "cpp"
+    },
+    {
+        "name": "C#",
+        "slug": "cs"
+    },
+    {
+        "name": "JavaScript",
+        "slug": "js"
+    }
+]

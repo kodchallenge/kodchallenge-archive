@@ -6,6 +6,7 @@ import React from 'react'
 const index = () => {
     const router = useRouter()
     const { slug } = router.query
+
     return (
         <>
             <Head>
